@@ -4,6 +4,8 @@ node {
                  if (env.Branch_Name =~ '.*main') {
                 echo "main"
             } 
+    } 
+        stage('Build') {
         if (env.Branch_Name =~ '.*feature') {
                 echo "feature"
             }
