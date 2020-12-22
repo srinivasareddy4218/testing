@@ -3,8 +3,8 @@ node {
     stage('Build') {
                  if (env.Branch_Name =~ '.*main') {
                 echo "main"
-            } else {
-               echo "feature"
+            } if (env.Branch_Name =~ '.*feature') {
+                echo "feature"
             }
      }
 }
