@@ -1,8 +1,5 @@
 node {
-    
-    stage('Build') {
-             if (env.Branch_Name =~ 'main') {
-                echo "main"
+    if (env.Branch_Name =~ 'main') {
               stage('build') {
               echo "build"
               }
