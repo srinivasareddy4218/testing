@@ -1,4 +1,7 @@
 node {
+    def getGitBranchName() {
+    return scm.branches[0].name
+}
     stage('Build') {
     node {
         echo 'Pulling...' + env.BRANCH_NAME
