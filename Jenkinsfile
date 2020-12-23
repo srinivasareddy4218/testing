@@ -1,7 +1,7 @@
 node {
     
     stage('Build') {
-        echo "$(Branch_Name)"
+        echo "${Branch_Name}"
                  if (env.Branch_Name =~ '.*main') {
                 echo "main"
                  } else {
