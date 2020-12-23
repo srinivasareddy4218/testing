@@ -3,11 +3,13 @@ node {
     stage('Build') {
              if (env.Branch_Name =~ 'main') {
                 echo "main"
-         stage('build')
+              stage('build') {
               echo "build"
-           stage('test')
+              }
+                 stage('test') {
                 echo "test"
-            } 
+                 }
+             } 
         else{
         if (env.Branch_Name =~ 'feature') {
                 echo "feature"
