@@ -1,6 +1,6 @@
   def getGitBranchName() {
     return scm.branches[0].name
 }
-stage(print){
+stage('print'){
     echo "${getGitBranchName}"
 }   
