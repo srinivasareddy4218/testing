@@ -1,4 +1,5 @@
-  def getGitBranchName() {
-    return scm.branches[0].name
+pipeline {
+  environment {
+     BRANCH_NAME = "${GIT_BRANCH.split("/")[1]}"
+  }
 }
-echo 'Pulling... ' + env.GIT_BRANCH
